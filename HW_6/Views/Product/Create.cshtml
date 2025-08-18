@@ -1,0 +1,33 @@
+﻿@model HW_6.Models.Product
+
+@{
+    ViewData["Title"] = "Создать товар";
+}
+
+<h1>Создать новый товар</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Название</label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label>Автор</label>
+        <input asp-for="Author" />
+    </div>
+    <div>
+        <label>Цена</label>
+        <input asp-for="Price" type="number" />
+    </div>
+    <div>
+        <label>Категория</label>
+        <input asp-for="Category" />
+    </div>
+    <div>
+        <label>Описание</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <button type="submit">Создать</button>
+</form>
+
+<a asp-action="Index">Назад к списку</a>

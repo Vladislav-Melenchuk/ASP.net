@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Каталог";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h1>Каталог товаров</h1>
+
+
+<form method="get" asp-action="Search">
+    <input type="text" name="keyword" placeholder="Поиск..." />
+    <button type="submit">Найти</button>
+</form>
+
+
+<a asp-action="Create">
+    <button>Создать товар</button>
+</a>
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Цена</th>
+        <th>Категория</th>
+        <th>Действия</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Title</td>
+            <td>@product.Author</td>
+            <td>@product.Price</td>
+            <td>@product.Category</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@product.Id">Подробнее</a>
+                <form asp-action="Delete" asp-route-id="@product.Id" method="post" style="display:inline">
+                    <button type="submit">Удалить</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
