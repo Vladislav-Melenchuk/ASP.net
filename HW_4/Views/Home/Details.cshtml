@@ -1,0 +1,18 @@
+﻿@model HW_4.Models.User
+
+@{
+    ViewData["Title"] = "Детали пользователя";
+}
+
+<h1>Детали пользователя</h1>
+
+<ul class="list-group">
+    <li class="list-group-item"><strong>Имя:</strong> @Model.Name</li>
+    <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
+    <li class="list-group-item"><strong>Возраст:</strong> @Model.Age</li>
+</ul>
+
+<p>
+    <a asp-action="Edit" asp-route-email="@Model.Email" class="btn btn-warning mt-2">Редактировать</a>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Назад</a>
+</p>
