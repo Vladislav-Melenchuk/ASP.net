@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Обмен валют";
+
+    var currencies = new List<string> { "USD", "EUR", "UAH" };
+
+    var rates = new Dictionary<string, decimal>
+    {
+        { "USD", 1m },
+        { "EUR", 0.92m },
+        { "UAH", 41.5m }
+    };
+
+    string from = "";
+    string to = "";
+    string amountStr = "";
+    decimal result = 0;
+
+    if (Context.Request.Method == "POST")
+    {
+        from = Context.Request.Form["from"];
+        to = Context.Request.Form["to"];
+        amountStr = Context.Request.Form["amount"];
+
+        if (!string.IsNullOrEmpty(from) && !string.IsNullOrEmpty(to) && !string.IsNullOrEmpty(amountStr))
+        {
+            if (decimal.TryParse(amountStr, out decimal amount))
+            {
+                decimal baseAmount = amount / rates[from];
+                result = baseAmount * rates[to];
+            }
+        }
+    }
+}
+
+
+<h2>Обмен валют</h2>
+
+<form method="post">
+    <div>
+        <label>Из валюты:</label>
+        <select name="from">
+            @foreach (var c in currencies)
+            {
+                <option value="@c" selected="@(from == c ? "selected" : null)">@c</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label>В валюту:</label>
+        <select name="to">
+            @foreach (var c in currencies)
+            {
+                <option value="@c" selected="@(to == c ? "selected" : null)">@c</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label>Сумма:</label>
+        <input type="number" name="amount" step="0.01" value="@amountStr" />
+    </div>
+
+    <button type="submit">Обменять</button>
+</form>
+
+@if (result > 0)
+{
+    <p>Результат обмена: @result @to</p>
+}
