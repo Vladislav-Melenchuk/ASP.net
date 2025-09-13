@@ -1,0 +1,29 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Home Page";
+    var claim = User.FindFirst(ClaimTypes.NameIdentifier);
+    string userId = claim?.Value ?? "";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="mb-4">Добро пожаловать!</h1>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p class="lead">Привет, <strong>@User.Identity.Name</strong>!</p>
+        <a asp-controller="Notes" asp-action="Index">Мои заметки</a>
+        <a asp-controller="Account" asp-action="EditProfile" asp-route-id="@userId">Изменить профиль</a>
+        <a asp-controller="Account" asp-action="ChangePassword" asp-route-id="@userId">Поменять пароль</a>
+        <hr />
+        <form method="post" asp-controller="Account" asp-action="Logout">
+            <button type="submit" class="btn btn-danger btn-lg">Выход</button>
+        </form>
+    }
+    else
+    {
+        <div class="d-flex justify-content-center gap-3">
+            <a class="btn btn-primary btn-lg" asp-controller="Account" asp-action="Login">Вход</a>
+            <a class="btn btn-success btn-lg" asp-controller="Account" asp-action="Register">Регистрация</a>
+        </div>
+    }
+</div>
