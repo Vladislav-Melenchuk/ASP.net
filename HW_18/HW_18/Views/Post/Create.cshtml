@@ -1,0 +1,36 @@
+﻿@model HW_18.Models.Post
+@{
+    ViewBag.Title = "Создать пост";
+}
+
+<h2>Создать новый пост</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post" class="bg-dark p-4 rounded shadow">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label text-light"></label>
+                <input asp-for="Title" class="form-control bg-secondary text-light border-0" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Content" class="form-label text-light"></label>
+                <textarea asp-for="Content" class="form-control bg-secondary text-light border-0" rows="5"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Visibility" class="form-label text-light">Видимость</label>
+                <select asp-for="Visibility" class="form-select bg-secondary text-light border-0">
+                    <option value="Public">Публичный</option>
+                    <option value="Private">Приватный</option>
+                    <option value="Friends">Для друзей</option>
+                </select>
+                <span asp-validation-for="Visibility" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Создать пост</button>
+        </form>
+    </div>
+</div>

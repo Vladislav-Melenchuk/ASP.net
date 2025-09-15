@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HW_18.Models.User>
+@{
+    var currentUserId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value;
+    var friends = ViewBag.Friends as List<HW_18.Models.Friend>;
+}
+
+<h2>Пользователи</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            var existingFriend = friends.FirstOrDefault(f =>
+            (f.UserId == currentUserId && f.FriendId == user.Id) ||
+            (f.UserId == user.Id && f.FriendId == currentUserId));
+
+            <tr>
+                <td>@user.Email</td>
+                <td>
+                    @if (existingFriend == null)
+                    {
+                        <form asp-action="SendRequest" method="post" class="d-inline">
+                            <input type="hidden" name="friendId" value="@user.Id" />
+                            <button class="btn btn-primary btn-sm">Добавить в друзья</button>
+                        </form>
+                    }
+                    else if (!existingFriend.IsConfirmed && existingFriend.FriendId == currentUserId)
+                    {
+                       
+                        <form asp-action="ConfirmRequest" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@existingFriend.Id" />
+                            <button class="btn btn-success btn-sm">Принять</button>
+                        </form>
+                        <form asp-action="RejectRequest" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@existingFriend.Id" />
+                            <button class="btn btn-danger btn-sm">Отклонить</button>
+                        </form>
+                    }
+                    else if (!existingFriend.IsConfirmed && existingFriend.UserId == currentUserId)
+                    {
+                        <span class="text-warning">Ожидание подтверждения</span>
+                    }
+                    else
+                    {
+                        <span class="text-success">Вы друзья</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
