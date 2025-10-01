@@ -1,0 +1,59 @@
+﻿@model HW_ViewComponent.Models.Book
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h2>@Model.Title</h2>
+<p><strong>Автор:</strong> @Model.Author</p>
+<p><strong>Жанр:</strong> @Model.Genre</p>
+<p><strong>Цена:</strong> @Model.Price</p>
+
+<hr />
+
+<h3>Комментарии</h3>
+
+@if (Model.Comments != null && Model.Comments.Any())
+{
+    <ul class="list-group mb-3">
+        @foreach (var c in Model.Comments.OrderByDescending(c => c.CreatedAt))
+        {
+            <li class="list-group-item">
+                <strong>@c.AuthorName</strong> (@c.CreatedAt.ToLocalTime().ToString("g")):
+                <div>@c.Body</div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Комментариев пока нет.</p>
+}
+
+<hr />
+
+<h4>Оставить комментарий</h4>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="AddComment" method="post">
+    <input type="hidden" name="bookId" value="@Model.Id" />
+
+    <div class="mb-3">
+        <label for="authorName" class="form-label">Ваше имя</label>
+        <input type="text" class="form-control" name="authorName" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="body" class="form-label">Комментарий</label>
+        <textarea class="form-control" name="body" rows="3" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Добавить</button>
+</form>
+
+<hr />
+<a asp-action="Index" class="btn btn-link">← Назад к каталогу</a>
