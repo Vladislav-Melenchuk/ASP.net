@@ -1,0 +1,21 @@
+﻿@model Matrix
+@{
+    ViewBag.Title = "Результат";
+}
+
+<h2>Результат операции: @Model.Operation</h2>
+
+<table border="1">
+    @for (int i = 0; i < Model.Size; i++)
+    {
+        <tr>
+            @for (int j = 0; j < Model.Size; j++)
+            {
+                <td>@Model.Result[i, j]</td>
+            }
+        </tr>
+    }
+</table>
+
+<br />
+@Html.ActionLink("Вернуться", "Index")

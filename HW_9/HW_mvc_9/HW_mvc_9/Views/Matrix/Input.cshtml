@@ -1,0 +1,51 @@
+﻿@model Matrix
+@{
+    ViewBag.Title = "Ввод значений";
+}
+
+<h2>Введите значения матриц</h2>
+
+@using (Html.BeginForm("Calculate", "Matrix", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Size)
+
+    <h3>Матрица A</h3>
+    <table border="1">
+        @for (int i = 0; i < Model.Size; i++)
+        {
+            <tr>
+                @for (int j = 0; j < Model.Size; j++)
+                {
+                    <td>
+                        <input type="text" name="MatrixA[@i][@j]" />
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+
+    <h3>Матрица B</h3>
+    <table border="1">
+        @for (int i = 0; i < Model.Size; i++)
+        {
+            <tr>
+                @for (int j = 0; j < Model.Size; j++)
+                {
+                    <td>
+                        <input type="text" name="MatrixB[@i][@j]" />
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+
+    <div style="margin-top:10px;">
+        @Html.RadioButton("Operation", "Add", true) <label>Сложение</label>
+        &nbsp;&nbsp;
+        @Html.RadioButton("Operation", "Multiply") <label>Умножение</label>
+    </div>
+
+    <br />
+    <button type="submit">Рассчитать</button>
+}
