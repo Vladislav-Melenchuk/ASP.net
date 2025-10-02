@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Погода";
+}
+
+<h2>Погода в городе</h2>
+
+<form method="post">
+    <input type="text" name="city" placeholder="Введите город" required />
+    <button type="submit">Показать</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+@if (ViewBag.City != null)
+{
+    <div style="margin-top:20px;">
+        <h3>@ViewBag.City (@ViewBag.Country)</h3>
+        <p>Температура: @ViewBag.Temp °C</p>
+        <p>Ощущается как: @ViewBag.FeelsLike °C</p>
+        <p>Погода: @ViewBag.Weather</p>
+        <p>Влажность: @ViewBag.Humidity %</p>
+        <p>Ветер: @ViewBag.Wind м/с</p>
+    </div>
+}
