@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Настройки чтения";
+    var theme = ViewBag.Theme as string;
+}
+
+<h1>Настройки чтения</h1>
+
+<form method="post">
+    <label>
+        <input type="radio" name="theme" value="light" @(theme == "light" ? "checked" : "") />
+        Светлая тема
+    </label>
+    <label>
+        <input type="radio" name="theme" value="dark" @(theme == "dark" ? "checked" : "") />
+        Тёмная тема
+    </label>
+    <br /><br />
+    <button type="submit">Сохранить</button>
+</form>

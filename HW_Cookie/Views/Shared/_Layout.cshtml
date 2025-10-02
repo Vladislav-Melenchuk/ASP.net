@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Блог</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="@ViewBag.Theme">
+    <header>
+        <nav>
+            <a href="/Blog/Index">Главная</a>
+            <a href="/Blog/Settings">Настройки чтения</a>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>© @DateTime.Now.Year Мой блог</p>
+    </footer>
+</body>
+</html>

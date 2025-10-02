@@ -1,0 +1,15 @@
+﻿@model List<HW_Cookie.Models.News>
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<h1>Новости блога</h1>
+
+@foreach (var news in Model)
+{
+    <div class="news-card">
+        <h2>@news.Title</h2>
+        <p>@news.Content</p>
+        <small>Дата: @news.Date.ToString("dd.MM.yyyy")</small>
+    </div>
+}
