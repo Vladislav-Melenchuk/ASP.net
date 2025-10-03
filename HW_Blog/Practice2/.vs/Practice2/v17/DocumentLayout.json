@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Course\\Asp.net\\Practice2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\interfaces\\ipublication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\interfaces\\ipublication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\views\\shared\\_pageoptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\views\\shared\\_pageoptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\repositories\\publicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\repositories\\publicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\viewmodels\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\viewmodels\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\models\\pagelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\models\\pagelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|d:\\course\\asp.net\\practice2\\practice2\\models\\queryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C774945F-8D30-45E9-BD5B-FCFE61F58107}|Practice2\\Practice2.csproj|solutionrelative:practice2\\models\\queryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Practice2\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Practice2\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T13:29:34.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Practice2\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Practice2\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:29:16.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_PageOptions.cshtml",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Views\\Shared\\_PageOptions.cshtml",
+              "RelativeDocumentMoniker": "Practice2\\Views\\Shared\\_PageOptions.cshtml",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Views\\Shared\\_PageOptions.cshtml",
+              "RelativeToolTip": "Practice2\\Views\\Shared\\_PageOptions.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T13:28:32.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PublicationRepository.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Repositories\\PublicationRepository.cs",
+              "RelativeDocumentMoniker": "Practice2\\Repositories\\PublicationRepository.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Repositories\\PublicationRepository.cs",
+              "RelativeToolTip": "Practice2\\Repositories\\PublicationRepository.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:27:05.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IPublication.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Interfaces\\IPublication.cs",
+              "RelativeDocumentMoniker": "Practice2\\Interfaces\\IPublication.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Interfaces\\IPublication.cs",
+              "RelativeToolTip": "Practice2\\Interfaces\\IPublication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:26:39.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IndexViewModel.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\ViewModels\\IndexViewModel.cs",
+              "RelativeDocumentMoniker": "Practice2\\ViewModels\\IndexViewModel.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\ViewModels\\IndexViewModel.cs",
+              "RelativeToolTip": "Practice2\\ViewModels\\IndexViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:20:50.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PageList.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Models\\PageList.cs",
+              "RelativeDocumentMoniker": "Practice2\\Models\\PageList.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Models\\PageList.cs",
+              "RelativeToolTip": "Practice2\\Models\\PageList.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:19:46.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QueryOptions.cs",
+              "DocumentMoniker": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Models\\QueryOptions.cs",
+              "RelativeDocumentMoniker": "Practice2\\Models\\QueryOptions.cs",
+              "ToolTip": "D:\\Course\\Asp.net\\Practice2\\Practice2\\Models\\QueryOptions.cs",
+              "RelativeToolTip": "Practice2\\Models\\QueryOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:19:31.296Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
