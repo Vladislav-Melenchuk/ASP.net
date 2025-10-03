@@ -1,0 +1,40 @@
+﻿@model HW_FutureMe.Models.Letter
+
+@{
+    ViewData["Title"] = "Написать письмо";
+}
+
+<h1>Напиши письмо в будущее</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <label>Сообщение</label>
+        <textarea asp-for="Message" class="form-control"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <label>Дата отправки</label>
+        <input asp-for="SendDate" type="date" class="form-control" />
+        <span asp-validation-for="SendDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-check mt-3">
+        <input asp-for="IsPublic" class="form-check-input" type="checkbox" />
+        <label class="form-check-label">Сделать письмо публичным</label>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Отправить</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

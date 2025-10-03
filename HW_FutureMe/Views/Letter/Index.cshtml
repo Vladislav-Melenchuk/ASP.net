@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HW_FutureMe.Models.Letter>
+
+@{
+    ViewData["Title"] = "Публичные письма";
+}
+
+<h1>Публичные письма пользователей</h1>
+
+<a class="btn btn-primary" asp-action="Create">Написать новое письмо</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Сообщение</th>
+            <th>Дата отправки</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var letter in Model)
+        {
+            <tr>
+                <td>@letter.Email</td>
+                <td>@letter.Message</td>
+                <td>@letter.SendDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
