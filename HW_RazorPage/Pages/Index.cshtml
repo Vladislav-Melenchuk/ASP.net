@@ -1,5 +1,5 @@
-﻿@model List<HW_RazorPage.Models.TodoItem>
-
+﻿@page
+@model HW_RazorPage.Pages.IndexModel
 @{
     ViewData["Title"] = "To-Do List";
 }
@@ -9,31 +9,34 @@
 
     <div class="card">
         <h2>Додати нове завдання</h2>
-        <form asp-action="Create" method="post" class="todo-form">
+        <form method="post" asp-page-handler="Create" class="todo-form">
             <div class="form-row">
-                <input type="text" name="Title" class="input" placeholder="Наприклад: Купити молоко" />
+                <input asp-for="NewTodo.Title" class="input" placeholder="Наприклад: Купити молоко" />
                 <button type="submit" class="btn primary">Додати</button>
             </div>
+            <span asp-validation-for="NewTodo.Title" class="validation"></span>
         </form>
-
     </div>
 
     <div class="card">
         <h2>Поточні завдання</h2>
-        @if (Model.Any())
+        @if (Model.Todos.Any())
         {
             <ul class="todo-list">
-                @foreach (var t in Model)
+                @foreach (var t in Model.Todos)
                 {
                     <li class="todo-item @(t.IsCompleted ? "done" : "")">
-                        <form asp-action="Toggle" method="post" class="inline">
+                        <form method="post" asp-page-handler="Toggle" class="inline">
                             <input type="hidden" name="id" value="@t.Id" />
                             <button type="submit" class="icon-btn">@(t.IsCompleted ? "☑" : "☐")</button>
                         </form>
+
                         <span class="todo-title">@t.Title</span>
+
                         <span class="spacer"></span>
-                        <a asp-action="Edit" asp-route-id="@t.Id" class="btn small">Редагувати</a>
-                        <form asp-action="Delete" method="post" class="inline" onsubmit="return confirm('Видалити завдання?');">
+                        <a asp-page="Edit" asp-route-id="@t.Id" class="btn small">Редагувати</a>
+
+                        <form method="post" asp-page-handler="Delete" class="inline" onsubmit="return confirm('Видалити завдання?');">
                             <input type="hidden" name="id" value="@t.Id" />
                             <button type="submit" class="btn danger small">Видалити</button>
                         </form>
@@ -43,7 +46,7 @@
         }
         else
         {
-            <div class="empty">Список порожній 👆</div>
+            <div class="empty">Список порожній</div>
         }
     </div>
 </section>
