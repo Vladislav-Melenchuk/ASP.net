@@ -1,0 +1,16 @@
+﻿@model HW_Auth.Models.User
+
+<h2>Реєстрація</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    <br />
+
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    <br />
+
+    <button type="submit">Зареєструватися</button>
+}
